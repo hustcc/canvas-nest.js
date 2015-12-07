@@ -16,7 +16,7 @@ so eazy that I do not want write the chapter.
 
 then ok!
 
-## demo 
+## preview 
 
 1. [OnlineTool: http://www.atool.org/](http://www.atool.org/)
 
