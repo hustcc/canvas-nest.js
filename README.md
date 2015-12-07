@@ -1,5 +1,5 @@
-# cavas-nest.js
-A nest backgroud of website draw on cavas.
+# canvas-nest.js
+A nest backgroud of website draw on canvas.
 
 
 ## feature
