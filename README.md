@@ -1,7 +1,6 @@
 # canvas-nest.js
 A nest backgroud of website draw on canvas.
 
-
 ## feature
 
  - do not depend on jQuery or other javascript framework.
@@ -12,7 +11,22 @@ A nest backgroud of website draw on canvas.
 
 so eazy that I do not want write the chapter.
 
-    <script type="text/javascript" src="canvas-nest.js"></script>
+insert the code below `between <body> and </body>`, suggest before the tag `</body>`.
+	
+	<html>
+	<head>
+		...
+	</head>
+	<body>
+		...
+		...
+		...
+    	<script type="text/javascript" src="canvas-nest.min.js"></script>
+	</body
+	</html>
+
+
+`please do not add the code in the <head> </head>`
 
 then ok!
 
@@ -22,14 +36,8 @@ then ok!
 
 if you has used this project, pls let me know, I can add your website on.
 
-
-![screenshot](screenshot.png)
-
+![screenshot](https://raw.githubusercontent.com/hustcc/canvas-nest.js/master/screenshot.png)
 
 ## other
 
- - the code is from other website, is not writed by myself. I just do some code on it.
- - I search the github, but can not find the code.
- - if the code is piracy of yours, pls let me know.
-
-
+welcome to push request and issue.
