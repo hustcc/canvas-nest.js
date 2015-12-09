@@ -13,7 +13,7 @@ so eazy that I do not want write the chapter.
 
 insert the code below `between <body> and </body>`.
 
-	<script type="text/javascript" src="http://github.atool.org/canvas-nest.min.js"></script>
+	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
 
 suggest before the tag `</body>`. like below:
 	
@@ -25,7 +25,7 @@ suggest before the tag `</body>`. like below:
 		...
 		...
 		...
-    	<script type="text/javascript" src="http://github.atool.org/canvas-nest.min.js"></script>
+    	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
 	</body
 	</html>
 
