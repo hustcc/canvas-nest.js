@@ -26,7 +26,7 @@ insert the code below `between <body> and </body>`, suggest before the tag `</bo
 	</html>
 
 
-`please do not add the code in the <head> </head>`
+`please do not add the code in the <head> </head>`.
 
 then ok!
 
