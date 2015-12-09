@@ -11,7 +11,11 @@ A nest backgroud of website draw on canvas.
 
 so eazy that I do not want write the chapter.
 
-insert the code below `between <body> and </body>`, suggest before the tag `</body>`.
+insert the code below `between <body> and </body>`.
+
+	<script type="text/javascript" src="http://github.atool.org/canvas-nest.min.js"></script>
+
+suggest before the tag `</body>`. like below:
 	
 	<html>
 	<head>
@@ -21,7 +25,7 @@ insert the code below `between <body> and </body>`, suggest before the tag `</bo
 		...
 		...
 		...
-    	<script type="text/javascript" src="canvas-nest.min.js"></script>
+    	<script type="text/javascript" src="http://github.atool.org/canvas-nest.min.js"></script>
 	</body
 	</html>
 
@@ -39,5 +43,7 @@ if you has used this project, pls let me know, I can add your website on.
 ![screenshot](https://raw.githubusercontent.com/hustcc/canvas-nest.js/master/screenshot.png)
 
 ## other
+
+project lib cdn url: [http://github.atool.org/canvas-nest.min.js](http://github.atool.org/canvas-nest.min.js), if you has your own cdn, download `canvas-nest.min.js` and use your own url.
 
 welcome to push request and issue.
