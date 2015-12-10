@@ -4,7 +4,7 @@ A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://g
 ## feature
 
  - do not depend on jQuery or other javascript framework.
- - very light, only 1.79kb. can be smaller after gzip.
+ - very light, only 1.75kb. can be smaller after gzip.
  - so easy to use, even you are not a web developer.
 
 ## usage

@@ -1,84 +1,83 @@
 "use strict";
 ! function() {
-    function r(a, b, f) {
-        return a.getAttribute(b) || f
+    function u(b, f, a) {
+        return b.getAttribute(f) || a
     }
 
-    function e() {
-        var h = document.getElementsByTagName("script"),
-            f = h.length,
-            a = h[f - 1],
-            g, b, j;
-        g = r(a, "zIndex", -1);
-        b = r(a, "opacity", 0.5);
-        j = r(a, "color", "0,0,0");
+    function c() {
+        var f = document.getElementsByTagName("script"),
+            a = f.length,
+            h = f[a - 1],
+            b, j, g;
+        b = u(h, "zIndex", -1);
+        j = u(h, "opacity", 0.5);
+        g = u(h, "color", "0,0,0");
         return {
-            l: f,
-            z: g,
-            o: b,
-            c: j
+            l: a,
+            z: b,
+            o: j,
+            c: g
         }
     }
 
-    function E() {
-        m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    function B() {
+        i.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, i.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     }
 
-    function F() {
-        c.clearRect(0, 0, m.width, m.height);
-        var a = [z].concat(l);
-        l.forEach(function(f) {
-            f.x += f.xa, f.y += f.ya, f.xa *= f.x > m.width || f.x < 0 ? -1 : 1, f.ya *= f.y > m.height || f.y < 0 ? -1 : 1, c.fillRect(f.x - 0.5, f.y - 0.5, 1, 1);
-            for (var k = 0; k < a.length; k++) {
-                var b = a[k];
-                if (f !== b && null !== b.x && null !== b.y) {
-                    var g, o = f.x - b.x,
-                        h = f.y - b.y,
-                        j = o * o + h * h;
-                    j < b.max && (b === z && j >= b.max / 2 && (f.x -= 0.03 * o, f.y -= 0.03 * h), g = (b.max - j) / b.max, c.beginPath(), c.lineWidth = g / 2, c.strokeStyle = "rgba(" + d.c + "," + (g + 0.2) + ")", c.moveTo(f.x, f.y), c.lineTo(b.x, b.y), c.stroke())
+    function C() {
+        z.clearRect(0, 0, i.width, i.height);
+        var a = [A].concat(e);
+        e.forEach(function(o) {
+            o.x += o.xa, o.y += o.ya, o.xa *= o.x > i.width || o.x < 0 ? -1 : 1, o.ya *= o.y > i.height || o.y < 0 ? -1 : 1, z.fillRect(o.x - 0.5, o.y - 0.5, 1, 1);
+            for (var j = 0; j < a.length; j++) {
+                var k = a[j];
+                if (o !== k && null !== k.x && null !== k.y) {
+                    var b, h = o.x - k.x,
+                        f = o.y - k.y,
+                        g = h * h + f * f;
+                    g < k.max && (k === A && g >= k.max / 2 && (o.x -= 0.03 * h, o.y -= 0.03 * f), b = (k.max - g) / k.max, z.beginPath(), z.lineWidth = b / 2, z.strokeStyle = "rgba(" + D.c + "," + (b + 0.2) + ")", z.moveTo(o.x, o.y), z.lineTo(k.x, k.y), z.stroke())
                 }
             }
-            a.splice(a.indexOf(f), 1)
-        }), A(F)
+            a.splice(a.indexOf(o), 1)
+        }), m(C)
     }
-    var u = document.createElement("canvas"),
-        d = e(),
-        B = "c_n" + d.l;
-    u.id = B;
-    u.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o;
-    document.getElementsByTagName("body")[0].appendChild(u);
-    var m = document.getElementById(B),
-        c = m.getContext("2d");
-    E(), window.onresize = E;
-    var A = function() {
+    var i = document.createElement("canvas"),
+        D = c(),
+        n = "c_n" + D.l,
+        z = i.getContext("2d");
+    i.id = n;
+    i.style.cssText = "position:fixed;top:0;left:0;z-index:" + D.z + ";opacity:" + D.o;
+    document.getElementsByTagName("body")[0].appendChild(i);
+    B(), window.onresize = B;
+    var m = function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(a) {
             window.setTimeout(a, 1000 / 60)
         }
     }(),
-        z = {
+        A = {
             x: null,
             y: null,
             max: 20000
         };
     window.onmousemove = function(a) {
-        a = a || window.event, z.x = a.clientX, z.y = a.clientY
+        a = a || window.event, A.x = a.clientX, A.y = a.clientY
     }, window.onmouseout = function(a) {
-        z.x = null, z.y = null
+        A.x = null, A.y = null
     };
-    for (var l = [], t = 0; 150 > t; t++) {
-        var n = Math.random() * m.width,
-            D = Math.random() * m.height,
-            C = 2 * Math.random() - 1,
-            i = 2 * Math.random() - 1;
-        l.push({
-            x: n,
-            y: D,
-            xa: C,
-            ya: i,
+    for (var e = [], t = 0; 150 > t; t++) {
+        var l = Math.random() * i.width,
+            x = Math.random() * i.height,
+            r = 2 * Math.random() - 1,
+            d = 2 * Math.random() - 1;
+        e.push({
+            x: l,
+            y: x,
+            xa: r,
+            ya: d,
             max: 6000
         })
     }
     setTimeout(function() {
-        F()
+        C()
     }, 100)
 }();
