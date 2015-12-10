@@ -36,9 +36,9 @@ then ok!
 
 ## config
 
- - `color`: the canvas line color, default: '0,0,0' (R,G,B)
- - `opacity`: the opacity of line, default: 0.5
- - `zIndex`: the index of z space, default: -1
+ - `color`: the canvas line color, default: `'0,0,0'` ; the color is (R,G,B)
+ - `opacity`: the opacity of line, default: `0.5`
+ - `zIndex`: the index of z space, default: `-1`
 
 Example:
 
