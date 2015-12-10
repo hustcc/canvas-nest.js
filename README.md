@@ -34,7 +34,7 @@ suggest before the tag `</body>`. like below:
 
 then ok!
 
-## config
+## 配置和配置项
 
  - `color`: the canvas line color, default: '0,0,0' (R,G,B)
  - `opacity`: the opacity of line, default: 0.5
