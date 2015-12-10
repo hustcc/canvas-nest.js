@@ -1,86 +1,84 @@
 "use strict";
 ! function() {
-    function C(f, a, b) {
-        return f.getAttribute(a) || b
+    function r(a, b, f) {
+        return a.getAttribute(b) || f
     }
 
-    function l() {
-        var a = document.getElementsByTagName("script"),
-            f = a[a.length - 1],
-            h, g, b;
-        h = C(f, "zIndex", -1);
-        g = C(f, "opacity", 0.5);
-        b = C(f, "color", "0,0,0");
+    function e() {
+        var h = document.getElementsByTagName("script"),
+            f = h.length,
+            a = h[f - 1],
+            g, b, j;
+        g = r(a, "zIndex", -1);
+        b = r(a, "opacity", 0.5);
+        j = r(a, "color", "0,0,0");
         return {
-            z: h,
-            o: g,
-            c: b
+            l: f,
+            z: g,
+            o: b,
+            c: j
         }
     }
 
-    function t() {
-        A.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, A.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    function E() {
+        m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     }
 
-    function d() {
-        e.clearRect(0, 0, A.width, A.height);
-        var b = [D].concat(n);
-        n.forEach(function(h) {
-            h.x += h.xa, h.y += h.ya, h.xa *= h.x > A.width || h.x < 0 ? -1 : 1, h.ya *= h.y > A.height || h.y < 0 ? -1 : 1, e.fillRect(h.x - 0.5, h.y - 0.5, 1, 1);
-            for (var a = 0; a < b.length; a++) {
-                var g = b[a];
-                if (h !== g && null !== g.x && null !== g.y) {
-                    var j, f = h.x - g.x,
-                        o = h.y - g.y,
-                        k = f * f + o * o;
-                    k < g.max && (g === D && k >= g.max / 2 && (h.x -= 0.03 * f, h.y -= 0.03 * o), j = (g.max - k) / g.max, e.beginPath(), e.lineWidth = j / 2, e.strokeStyle = "rgba(" + i.c + "," + (j + 0.2) + ")", e.moveTo(h.x, h.y), e.lineTo(g.x, g.y), e.stroke())
+    function F() {
+        c.clearRect(0, 0, m.width, m.height);
+        var a = [z].concat(l);
+        l.forEach(function(f) {
+            f.x += f.xa, f.y += f.ya, f.xa *= f.x > m.width || f.x < 0 ? -1 : 1, f.ya *= f.y > m.height || f.y < 0 ? -1 : 1, c.fillRect(f.x - 0.5, f.y - 0.5, 1, 1);
+            for (var k = 0; k < a.length; k++) {
+                var b = a[k];
+                if (f !== b && null !== b.x && null !== b.y) {
+                    var g, o = f.x - b.x,
+                        h = f.y - b.y,
+                        j = o * o + h * h;
+                    j < b.max && (b === z && j >= b.max / 2 && (f.x -= 0.03 * o, f.y -= 0.03 * h), g = (b.max - j) / b.max, c.beginPath(), c.lineWidth = g / 2, c.strokeStyle = "rgba(" + d.c + "," + (g + 0.2) + ")", c.moveTo(f.x, f.y), c.lineTo(b.x, b.y), c.stroke())
                 }
             }
-            b.splice(b.indexOf(h), 1)
-        }), u(d)
+            a.splice(a.indexOf(f), 1)
+        }), A(F)
     }
-    var c = "canvas_nest",
-        r = document.createElement("canvas"),
-        i = l();
-    r.id = c;
-    r.style.position = "fixed";
-    r.style.top = 0;
-    r.style.left = 0;
-    r.style.zIndex = i.z;
-    r.style.opacity = i.o;
-    document.getElementsByTagName("body")[0].appendChild(r);
-    var A = document.getElementById(c),
-        e = A.getContext("2d");
-    t(), window.onresize = t;
-    var u = function() {
-        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(b) {
-            window.setTimeout(b, 1000 / 60)
+    var u = document.createElement("canvas"),
+        d = e(),
+        B = "c_n" + d.l;
+    u.id = B;
+    u.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o;
+    document.getElementsByTagName("body")[0].appendChild(u);
+    var m = document.getElementById(B),
+        c = m.getContext("2d");
+    E(), window.onresize = E;
+    var A = function() {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(a) {
+            window.setTimeout(a, 1000 / 60)
         }
     }(),
-        D = {
+        z = {
             x: null,
             y: null,
             max: 20000
         };
-    window.onmousemove = function(b) {
-        b = b || window.event, D.x = b.clientX, D.y = b.clientY
-    }, window.onmouseout = function(b) {
-        D.x = null, D.y = null
+    window.onmousemove = function(a) {
+        a = a || window.event, z.x = a.clientX, z.y = a.clientY
+    }, window.onmouseout = function(a) {
+        z.x = null, z.y = null
     };
-    for (var n = [], F = 0; 150 > F; F++) {
-        var B = Math.random() * A.width,
-            E = Math.random() * A.height,
-            z = 2 * Math.random() - 1,
-            m = 2 * Math.random() - 1;
-        n.push({
-            x: B,
-            y: E,
-            xa: z,
-            ya: m,
+    for (var l = [], t = 0; 150 > t; t++) {
+        var n = Math.random() * m.width,
+            D = Math.random() * m.height,
+            C = 2 * Math.random() - 1,
+            i = 2 * Math.random() - 1;
+        l.push({
+            x: n,
+            y: D,
+            xa: C,
+            ya: i,
             max: 6000
         })
     }
     setTimeout(function() {
-        d()
+        F()
     }, 100)
 }();
