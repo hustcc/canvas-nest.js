@@ -4,7 +4,7 @@ A nest backgroud of website draw on canvas.
 ## feature
 
  - do not depend on jQuery or other javascript framework.
- - very light, only 1.59kb. can be smaller after gzip.
+ - very light, only 1.79kb. can be smaller after gzip.
  - so easy to use, even you are not a web developer.
 
 ## usage
@@ -34,6 +34,18 @@ suggest before the tag `</body>`. like below:
 
 then ok!
 
+## config
+
+ - `color`: the canvas line color, default: '0,0,0' (R,G,B)
+ - `opacity`: the opacity of line, default: 0.5
+ - `zIndex`: the index of z space, default: -1
+
+Example:
+
+	<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" src="//github.atool.org/canvas-nest.min.js"></script>
+
+set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them.
+
 ## preview 
 
 1. [OnlineTool: http://www.atool.org/](http://www.atool.org/)
@@ -46,4 +58,4 @@ if you has used this project, pls let me know, I can add your website on.
 
 project lib cdn url: [http://github.atool.org/canvas-nest.min.js](http://github.atool.org/canvas-nest.min.js), if you has your own cdn, download `canvas-nest.min.js` and use your own url.
 
-welcome to push request and issue.
+any bug or question, welcome to push request and issue.
