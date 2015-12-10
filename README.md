@@ -1,5 +1,5 @@
 # canvas-nest.js
-A nest backgroud of website draw on canvas.
+A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md)
 
 ## feature
 
