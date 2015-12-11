@@ -4,7 +4,7 @@ A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://g
 ## feature
 
  - do not depend on jQuery or other javascript framework.
- - very light, only 1.75kb. can be smaller after gzip.
+ - very light, only 1.74kb. can be smaller after gzip.
  - so easy to use, even you are not a web developer.
 
 ## usage
@@ -16,7 +16,7 @@ insert the code below `between <body> and </body>`.
 	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
 
 suggest before the tag `</body>`. like below:
-	
+
 	<html>
 	<head>
 		...
@@ -37,16 +37,17 @@ then ok!
 ## config
 
  - `color`: the canvas line color, default: `'0,0,0'` ; the color is (R,G,B)
- - `opacity`: the opacity of line, default: `0.5`
+ - `opacity`: the opacity of line (0~1), default: `0.5`
+ - `count`: the number of lines, default: `150`
  - `zIndex`: the index of z space, default: `-1`
 
 Example:
 
-	<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" src="//github.atool.org/canvas-nest.min.js"></script>
+	<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//github.atool.org/canvas-nest.min.js"></script>
 
 set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them.
 
-## preview 
+## preview
 
 1. [OnlineTool: http://www.atool.org/](http://www.atool.org/)
 
