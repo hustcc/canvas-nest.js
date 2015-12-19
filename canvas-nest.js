@@ -1,11 +1,11 @@
 ! function() {
 	//封装方法，压缩之后减少文件大小
 	function get_attribute(node, attr, default_value) {
-		return node.getAttribute(attr) || default_value
+		return node.getAttribute(attr) || default_value;
 	}
 	//封装方法，压缩之后减少文件大小
 	function get_by_tagname(name) {
-		return document.getElementsByTagName(name)
+		return document.getElementsByTagName(name);
 	}
 	//获取配置参数
 	function get_config_option() {
@@ -15,15 +15,15 @@
 		return {
 			l: script_len, //长度，用于生成id用
 			z: get_attribute(script, "zIndex", -1), //z-index
-			o: get_attribute(script, "opacity", .5), //opacity
+			o: get_attribute(script, "opacity", 0.5), //opacity
 			c: get_attribute(script, "color", "0,0,0"), //color
 			n: get_attribute(script, "count", 99) //count
-		}
+		};
 	}
 	//设置canvas的高宽
 	function set_canvas_size() {
 		canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, 
-		canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+		canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 	}
 
 	//绘制过程
@@ -53,12 +53,12 @@
 						context.strokeStyle = "rgba(" + config.c + "," + (d + 0.2) + ")", 
 						context.moveTo(r.x, r.y), 
 						context.lineTo(e.x, e.y), 
-						context.stroke())
+						context.stroke());
 				}
 			}
-			all_array.splice(all_array.indexOf(r), 1)
+			all_array.splice(all_array.indexOf(r), 1);
 
-		}), frame_func(draw_canvas)
+		}), frame_func(draw_canvas);
 	}
 	//创建画布，并添加到body中
 	var the_canvas = document.createElement("canvas"), //画布
@@ -66,7 +66,7 @@
 		canvas_id = "c_n" + config.l, //canvas id
 		context = the_canvas.getContext("2d"), canvas_width, canvas_height, 
 		frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {
-			window.setTimeout(func, 1000 / 45)
+			window.setTimeout(func, 1000 / 45);
 		}, random = Math.random, 
 		current_point = {
 			x: null, //当前鼠标x
@@ -81,10 +81,10 @@
 	set_canvas_size(), window.onresize = set_canvas_size;
 	//当时鼠标位置存储，离开的时候，释放当前位置信息
 	window.onmousemove = function(e) {
-		e = e || window.event, current_point.x = e.clientX, current_point.y = e.clientY
+		e = e || window.event, current_point.x = e.clientX, current_point.y = e.clientY;
 	}, window.onmouseout = function() {
-		current_point.x = null, current_point.y = null
-	}
+		current_point.x = null, current_point.y = null;
+	};
 	//随机生成config.n条线位置信息
 	for (var random_lines = [], i = 0; config.n > i; i++) {
 		var x = random() * canvas_width, //随机位置
@@ -97,10 +97,10 @@
 			xa: xa,
 			ya: ya,
 			max: 6000 //沾附距离
-		})
+		});
 	}
 	//0.1秒后绘制
 	setTimeout(function() {
-		draw_canvas()
-	}, 100)
+		draw_canvas();
+	}, 100);
 }();
