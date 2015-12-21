@@ -1,6 +1,8 @@
 # canvas-nest.js
 一个基于html5 canvas绘制的网页背景效果，非常赞！
 
+![travis-ci](https://travis-ci.org/aTool-org/canvas-nest.js.svg?branch=master)
+
 ## 特性
 
  - 不依赖任何框架或者内库，比如不依赖jQuery，使用原生的javascript。

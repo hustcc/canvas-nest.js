@@ -1,6 +1,8 @@
 # canvas-nest.js
 A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md)
 
+![travis-ci](https://travis-ci.org/aTool-org/canvas-nest.js.svg?branch=master)
+
 ## feature
 
  - do not depend on jQuery or other javascript framework.
