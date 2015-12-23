@@ -15,21 +15,25 @@ so eazy that I do not want write the chapter.
 
 insert the code below `between <body> and </body>`.
 
-	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
+```html
+<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
+```
 
 suggest before the tag `</body>`. like below:
 
-	<html>
-	<head>
-		...
-	</head>
-	<body>
-		...
-		...
-		...
-    	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
-	</body
-	</html>
+```html
+<html>
+<head>
+	...
+</head>
+<body>
+	...
+	...
+	...
+	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
+</body>
+</html>
+```
 
 
 `please do not add the code in the <head> </head>`.
@@ -45,7 +49,9 @@ then ok!
 
 Example:
 
-	<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//github.atool.org/canvas-nest.min.js"></script>
+```html
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//github.atool.org/canvas-nest.min.js"></script>
+```
 
 set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them.
 
