@@ -15,22 +15,25 @@
 
 将下面的代码插入到 `<body> 和 </body> 之间`.
 
-	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
+```html
+<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
+```
 
 强烈建议在 `</body>`标签上方. 例如下面的代码结构:
 
-	<html>
-	<head>
-		...
-	</head>
-	<body>
-		...
-		...
-		...
-    	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
-	</body
-	</html>
-
+```html
+<html>
+<head>
+	...
+</head>
+<body>
+	...
+	...
+	...
+	<script type="text/javascript" src="//github.atool.org/canvas-nest.min.js"></script>
+</body>
+</html>
+```
 
 `请注意不要将代码置于 <head> </head>里面`.
 
@@ -46,7 +49,9 @@
 
 Example:
 
-	<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//github.atool.org/canvas-nest.min.js"></script>
+```
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//github.atool.org/canvas-nest.min.js"></script>
+```
 
 这些属性配置在引用js的script标签中，作为它的一个属性值。所有的配置项都有默认值，如果你不知道怎么设置，可以先不设置这些配置项，就使用默认值看看效果也可以的。
 
