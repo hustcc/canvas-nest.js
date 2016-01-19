@@ -1,5 +1,5 @@
 # canvas-nest.js
-一个基于html5 canvas绘制的网页背景效果，非常赞！
+一个基于html5 canvas绘制的网页背景效果，非常赞！如果需要 `wordpress插件`，在插件库搜索 `canvas-nest` 或者看看项目 [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp)。
 
 ![travis-ci](https://travis-ci.org/aTool-org/canvas-nest.js.svg?branch=master)
 
