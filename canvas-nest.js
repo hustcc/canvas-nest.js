@@ -63,9 +63,9 @@
             for (i = 0; i < random_lines_.length; i++) {
                 p2 = random_lines_[i];
                 p1 !== p2 && (x_dist = p1.x - p2.x, y_dist = p1.y - p2.y, dist = x_dist * x_dist + y_dist * y_dist,//总距离的平方
-                    dist < max_2/4 && (a = (dist - min_2) / (max_2 - min_2),
+                    dist < max_2/4 && (a = (dist - min_2/4) / (max_2/4 - min_2/4),
                         context.beginPath(),
-                        context.lineWidth = 0.3*(1 - a),
+                        context.lineWidth = 0.5*(1 - a),
                         context.strokeStyle = style,
                         context.moveTo(p1.x, p1.y),
                         context.lineTo(p2.x+p2.vx, p2.y+p2.vy),
