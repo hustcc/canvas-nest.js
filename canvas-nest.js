@@ -42,7 +42,7 @@
 			for (i = idx + 1; i < all_array.length; i++) {
 				e = all_array[i];
 				//不是当前点
-				if (r !== e && null !== e.x && null !== e.y) {
+				if (null !== e.x && null !== e.y) {
 						x_dist = r.x - e.x, //x轴距离 l
 						y_dist = r.y - e.y, //y轴距离 n
 						dist = x_dist * x_dist + y_dist * y_dist; //总距离, m
