@@ -30,19 +30,19 @@
 	function draw_canvas() {
 		context.clearRect(0, 0, canvas_width, canvas_height);
 		//随机的线条和当前位置联合数组
-		var all_array = [current_point].concat(random_lines);
 		var e, i, d, x_dist, y_dist, dist; //临时节点
 		//遍历处理每一个点
-		random_lines.forEach(function(r) {
+		random_lines.forEach(function(r, idx) {
 			r.x += r.xa, 
 			r.y += r.ya, //移动
 			r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1, 
 			r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹
 			context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); //绘制一个宽高为1的点
-			for (i = 0; i < all_array.length; i++) {
+			//从下一个点开始
+			for (i = idx + 1; i < all_array.length; i++) {
 				e = all_array[i];
 				//不是当前点
-				if (r !== e && null !== e.x && null !== e.y) {
+				if (null !== e.x && null !== e.y) {
 						x_dist = r.x - e.x, //x轴距离 l
 						y_dist = r.y - e.y, //y轴距离 n
 						dist = x_dist * x_dist + y_dist * y_dist; //总距离, m
@@ -56,8 +56,6 @@
 						context.stroke());
 				}
 			}
-			all_array.splice(all_array.indexOf(r), 1);
-
 		}), frame_func(draw_canvas);
 	}
 	//创建画布，并添加到body中
@@ -72,7 +70,8 @@
 			x: null, //当前鼠标x
 			y: null, //当前鼠标y
 			max: 20000
-		};
+		},
+		all_array;
 	the_canvas.id = canvas_id;
 	the_canvas.style.cssText = "position:fixed;top:0;left:0;z-index:" + config.z + ";opacity:" + config.o;
 	get_by_tagname("body")[0].appendChild(the_canvas);
@@ -99,6 +98,7 @@
 			max: 6000 //沾附距离
 		});
 	}
+	all_array = random_lines.concat([current_point]);
 	//0.1秒后绘制
 	setTimeout(function() {
 		draw_canvas();
