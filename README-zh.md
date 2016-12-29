@@ -1,13 +1,16 @@
 # canvas-nest.js
-一个基于html5 canvas绘制的网页背景效果，非常赞！如果需要 `wordpress插件`，在插件库搜索 `canvas-nest` 或者看看项目 [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp)。
+
+> 一个基于html5 canvas绘制的网页背景效果，非常赞！如果需要 `wordpress插件`，在插件库搜索 `canvas-nest` 或者看看项目 [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp)。
 
 ![travis-ci](https://travis-ci.org/hustcc/canvas-nest.js.svg?branch=master)
 
+
 ## 特性
 
- - 不依赖任何框架或者内库，比如不依赖jQuery，使用原生的javascript。
- - 非常小，只有1.66kb，如果开启gzip，可以更小。
+ - 不依赖任何框架或者内库，比如不依赖 jQuery，使用原生的 javascript。
+ - 非常小，只有1.6 kb，如果开启 gzip，可以更小。
  - 非常容易实现，配置简单，即使你不是web开发者，也能简单搞定。
+
 
 ## 使用
 
@@ -39,6 +42,7 @@
 
 然后就完成了，打开网页即可看到效果!
 
+
 ## 配置和配置项
 
  - **`color`**: 线条颜色, 默认: `'0,0,0'` ；三个数字分别为(R,G,B)，注意用,分割
@@ -55,6 +59,7 @@ Example:
 
 这些属性配置在引用js的script标签中，作为它的一个属性值。所有的配置项都有默认值，如果你不知道怎么设置，可以先不设置这些配置项，就使用默认值看看效果也可以的。
 
+
 ## 示例
 
 1. [在线工具: http://www.atool.org/](http://www.atool.org/)
@@ -62,6 +67,7 @@ Example:
 如果你使用的了本项目，也可以修改此处文件，并pr，我会接受的。
 
 ![screenshot](https://raw.githubusercontent.com/hustcc/canvas-nest.js/master/screenshot.png)
+
 
 ## 其他
 

@@ -1,12 +1,12 @@
 {
   "name": "canvas-nest.js",
-  "officialName": "canvas-nest",
-  "version": "1.0.0",
-  "summary": "A nest backgroud of website draw on canvas use javascript, do not depend on jQuery.",
-  "description": "A nest backgroud of website draw on canvas use javascript, do not depend on jQuery.",
+  "officialName": "canvas-nest.js",
+  "version": "1.0.1",
+  "summary": "A nest backgroud of website draw on canvas use javascript, do not depends on jQuery.",
+  "description": "A nest backgroud of website draw on canvas use javascript, do not depends on jQuery.",
   "author": {
-    "name": "atool",
-    "url": "http://atool.org/"
+    "name": "hustcc",
+    "url": "https://github.com/hustcc"
   },
   "homepage": "http://www.atool.org",
   "license": "MIT",
@@ -15,18 +15,24 @@
     "html5",
     "nest"
   ],
-  "main": "canvas-nest.js",
+  "main": "dist/canvas-nest.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aTool-org/canvas-nest.js"
+    "url": "https://github.com/hustcc/canvas-nest.js"
   },
   "bugs": {
-    "url": "https://github.com/aTool-org/canvas-nest.js/issues"
+    "url": "https://github.com/hustcc/canvas-nest.js/issues"
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.2",
+    "gulp-rename": "^1.2.2"
   },
   "scripts": {
-    "test": "node test/index"
+    "lint": "jshint src/canvas-nest.js",
+    "test": "npm run lint",
+    "build": "gulp mini && npm run test"
   },
   "dependencies": {
   }

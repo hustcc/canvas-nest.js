@@ -1,13 +1,16 @@
 # canvas-nest.js
-A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md). For `wordpress plugin`, search `canvas-nest` or see [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp).
+
+> A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md). For `wordpress plugin`, search `canvas-nest` or see [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp).
 
 ![travis-ci](https://travis-ci.org/hustcc/canvas-nest.js.svg?branch=master)
+
 
 ## feature
 
  - do not depend on jQuery or other javascript framework.
- - very light, only 1.66kb. can be smaller after gzip.
+ - very light, only 1.6 kb. can be smaller after gzip.
  - so easy to use, even you are not a web developer.
+
 
 ## usage
 
@@ -40,6 +43,7 @@ suggest before the tag `</body>`. like below:
 
 then ok!
 
+
 ## config
 
  - **`color`**: the canvas line color, default: `'0,0,0'` ; the color is (R,G,B)
@@ -55,6 +59,7 @@ Example:
 
 set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them.
 
+
 ## preview
 
 1. [OnlineTool: http://www.atool.org/](http://www.atool.org/)
@@ -62,6 +67,7 @@ set the config on the script node `as a attribute`. all the config has the defau
 if you has used this project, pls let me know, I can add your website on.
 
 ![screenshot](https://raw.githubusercontent.com/hustcc/canvas-nest.js/master/screenshot.png)
+
 
 ## other
 
