@@ -53,7 +53,7 @@
           y_dist = r.y - e.y; //y轴距离 n
           dist = x_dist * x_dist + y_dist * y_dist; //总距离, m
 
-          dist < e.max && (e === current_point && dist >= e.max / 2 && (r.x -= 0.02 * x_dist, r.y -= 0.02 * y_dist), //靠近的时候加速
+          dist < e.max && (e === current_point && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), //靠近的时候加速
             d = (e.max - dist) / e.max,
             context.beginPath(),
             context.lineWidth = d / 2,
