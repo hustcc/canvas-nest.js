@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2016 hustcc
  * License: MIT
- * Version: v1.0.0
+ * Version: v1.0.1
  * GitHub: https://github.com/hustcc/canvas-nest.js
 **/
 ! function() {

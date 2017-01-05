@@ -2,7 +2,7 @@
 
 > 一个基于html5 canvas绘制的网页背景效果，非常赞！如果需要 `wordpress插件`，在插件库搜索 `canvas-nest` 或者看看项目 [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp)。
 
-![travis-ci](https://travis-ci.org/hustcc/canvas-nest.js.svg?branch=master)
+![travis-ci](https://travis-ci.org/hustcc/canvas-nest.js.svg?branch=master) ![npm](https://img.shields.io/npm/v/canvas-nest.js.svg?style=flat-square) ![npm](https://img.shields.io/npm/l/canvas-nest.js.svg?style=flat-square)
 
 
 ## 特性
@@ -19,7 +19,7 @@
 将下面的代码插入到 `<body> 和 </body> 之间`.
 
 ```html
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 ```
 
 强烈建议在 `</body>`标签上方. 例如下面的代码结构:
@@ -33,7 +33,7 @@
 	...
 	...
 	...
-	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </body>
 </html>
 ```
@@ -54,7 +54,7 @@
 Example:
 
 ```
-<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 ```
 
 这些属性配置在引用js的script标签中，作为它的一个属性值。所有的配置项都有默认值，如果你不知道怎么设置，可以先不设置这些配置项，就使用默认值看看效果也可以的。
@@ -63,14 +63,15 @@ Example:
 ## 示例
 
 1. [在线工具: http://www.atool.org/](http://www.atool.org/)
+2. [爱表情 aiBQ: https://aibq.cn/](https://aibq.cn/)
 
-如果你使用的了本项目，也可以修改此处文件，并pr，我会接受的。
+如果你使用的了本项目，也可以修改此处文件，并 pr，我会接受的。
 
 ![screenshot](https://raw.githubusercontent.com/hustcc/canvas-nest.js/master/screenshot.png)
 
 
 ## 其他
 
-本项目的Javascript文件已经存储在CDN上，可以直接使用，地址为：[http://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js](http://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js)，如果你不需要CDN或者有自己的CDN，可以直接下载源码中的 `canvas-nest.min.js`，然后相应的修改使用地址即可。
+本项目的Javascript文件已经存储在CDN上，可以直接使用，地址为： [http://www.bootcdn.cn/canvas-nest.js/](http://www.bootcdn.cn/canvas-nest.js/)，如果你不需要 CDN 或者有自己的 CDN，可以直接下载源码 dist 目录中的 `canvas-nest.min.js`，然后相应的修改使用地址即可。
 
-有任何的bug或者建议，非常鼓励issue和pr，来者不拒。
+有任何的bug或者建议，非常鼓励 issue 和 pr，来者不拒。

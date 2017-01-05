@@ -2,7 +2,8 @@
 
 > A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md). For `wordpress plugin`, search `canvas-nest` or see [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp).
 
-![travis-ci](https://travis-ci.org/hustcc/canvas-nest.js.svg?branch=master)
+![travis-ci](https://travis-ci.org/hustcc/canvas-nest.js.svg?branch=master) ![npm](https://img.shields.io/npm/v/canvas-nest.js.svg?style=flat-square) ![npm](https://img.shields.io/npm/l/canvas-nest.js.svg?style=flat-square)
+
 
 
 ## feature
@@ -19,7 +20,7 @@ so eazy that I do not want write the chapter.
 insert the code below `between <body> and </body>`.
 
 ```html
-<script src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 ```
 
 suggest before the tag `</body>`. like below:
@@ -33,7 +34,7 @@ suggest before the tag `</body>`. like below:
 	...
 	...
 	...
-	<script src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+	<script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </body>
 </html>
 ```
@@ -54,7 +55,7 @@ then ok!
 Example:
 
 ```html
-<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 ```
 
 set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them.
@@ -63,6 +64,7 @@ set the config on the script node `as a attribute`. all the config has the defau
 ## preview
 
 1. [OnlineTool: http://www.atool.org/](http://www.atool.org/)
+2. [aiBQ: https://aibq.cn/](https://aibq.cn/)
 
 if you has used this project, pls let me know, I can add your website on.
 
@@ -71,6 +73,6 @@ if you has used this project, pls let me know, I can add your website on.
 
 ## other
 
-project lib cdn url: [http://www.bootcdn.cn/canvas-nest.js/](http://www.bootcdn.cn/canvas-nest.js/).
+Project library cdn url: [http://www.bootcdn.cn/canvas-nest.js/](http://www.bootcdn.cn/canvas-nest.js/).
 
 any bug or question, welcome to push request and issue.
