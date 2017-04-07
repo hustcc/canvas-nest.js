@@ -65,6 +65,7 @@ set the config on the script node `as a attribute`. all the config has the defau
 
 1. [OnlineTool: http://www.atool.org/](http://www.atool.org/)
 2. [aiBQ: https://aibq.cn/](https://aibq.cn/)
+3. [Jerey's Blog: http://jerey.cn/](http://jerey.cn/)
 
 if you has used this project, pls let me know, I can add your website on.
 
