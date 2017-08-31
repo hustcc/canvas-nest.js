@@ -71,7 +71,7 @@
     canvas_id = "c_n" + config.l, //canvas id
     context = the_canvas.getContext("2d"), canvas_width, canvas_height, 
     frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {
-      window.setTimeout(func, 1000 / 45);
+      window.setTimeout(func, 1000 / 60);
     }, random = Math.random, 
     current_point = {
       x: null, //当前鼠标x
@@ -113,6 +113,6 @@
   all_array = random_points.concat([current_point]);
   //0.1秒后绘制
   setTimeout(function() {
-    draw_canvas();
+    frame_func(draw_canvas);
   }, 100);
 }();
