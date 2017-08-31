@@ -113,6 +113,6 @@
   all_array = random_points.concat([current_point]);
   //0.1秒后绘制
   setTimeout(function() {
-    draw_canvas();
+    frame_func(draw_canvas);
   }, 100);
 }();
