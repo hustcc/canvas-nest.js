@@ -35,6 +35,5 @@
     "test": "npm run lint",
     "build": "gulp mini && npm run test"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
