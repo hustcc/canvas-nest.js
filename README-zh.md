@@ -62,9 +62,7 @@ Example:
 
 ## 示例
 
-1. [在线工具: http://www.atool.org/](http://www.atool.org/)
-2. [爱表情 aiBQ: https://aibq.cn/](https://aibq.cn/)
-3. [夏敏的博客: http://jerey.cn/](http://jerey.cn/)
+1. [在线工具: https://atool.vip/](https://atool.vip/)
 
 如果你使用的了本项目，也可以修改此处文件，并 pr，我会接受的。
 
