@@ -4,28 +4,68 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>canvas-nest.js</title>
-  </head>
-<body>
-<div style="float:right;" id="github_iframe"></div>
-
-<script type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="200" src="src/canvas-nest.js"></script>
-<script type="text/javascript">
-    function async_load() {
-        //async load github
-        var i = document.createElement("iframe");
-        i.src = "https://ghbtns.com/github-btn.html?user=hustcc&repo=canvas-nest.js&type=star&count=true";
-        i.scrolling = "no";
-        i.frameborder = "0";
-        i.border = "0";
-        i.setAttribute("frameborder", "0", 0);
-        i.width = "100px";
-        i.height = "20px";
-        document.getElementById("github_iframe").appendChild(i);
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
     }
 
-    if (window.addEventListener) {window.addEventListener("load", async_load, false);}
-    else if (window.attachEvent) {window.attachEvent("onload", async_load);}
-    else {window.onload = async_load;}
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    #github-iframe {
+      position: fixed;
+      right: 32px;
+      top: 32px;
+    }
+
+    #area-render {
+      position: fixed;
+      width: 320px;
+      height: 160px;
+      left: 4px;
+      bottom: 4px;
+      border: dashed 1px #ccc;
+    }
+  </style>
+</head>
+<body>
+<div id="github-iframe"></div>
+
+<div id="area-render"></div>
+
+<script type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="100" src="dist/canvas-nest.js"></script>
+<script type="text/javascript" src="dist/canvas-nest.umd.js"></script>
+<script type="text/javascript">
+  (function renderArea() {
+    new CanvasNest(document.getElementById('area-render'), {
+      color: '255,0,255',
+      count: 50,
+    });
+  })();
+
+  // 下面为其他 js，无需关注
+  function asyncLoad() {
+    //async load github
+    var i = document.createElement("iframe");
+    i.src = "https://ghbtns.com/github-btn.html?user=hustcc&repo=canvas-nest.js&type=star&count=true";
+    i.scrolling = "no";
+    i.frameborder = "0";
+    i.border = "0";
+    i.setAttribute("frameborder", "0", 0);
+    i.width = "100px";
+    i.height = "20px";
+    document.getElementById("github-iframe").appendChild(i);
+  }
+  function loadGitHubBtn() {
+    if (window.addEventListener) {window.addEventListener("load", asyncLoad, false);}
+    else if (window.attachEvent) {window.attachEvent("onload", asyncLoad);}
+    else {window.onload = asyncLoad;}
+  }
+
+  loadGitHubBtn();
 </script>
 </body>
 </html>

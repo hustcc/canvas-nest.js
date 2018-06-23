@@ -1,0 +1,26 @@
+{
+  "env": {
+    "rollup": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
+      ]
+    },
+    "babel": {
+      "presets": ["env"],
+      "plugins": [
+        "transform-class-properties",
+        "add-module-exports",
+        "transform-object-rest-spread"
+      ]
+    }
+  }
+}
