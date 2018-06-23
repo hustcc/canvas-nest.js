@@ -3,8 +3,8 @@
  * Contract: i@hust.cc
  */
 
-import { bind } from 'size-sensor';
-import { requestAnimationFrame, range, canvasStyle } from './utils';
+import { bind, clear } from 'size-sensor';
+import { requestAnimationFrame, cancelAnimationFrame, range, canvasStyle } from './utils';
 
 export default class CanvasNest {
   constructor(el, config) {
@@ -40,18 +40,18 @@ export default class CanvasNest {
       this.canvas.height = this.el.clientHeight;
     });
 
-    const onmousemove = window.onmousemove;
+    this.onmousemove = window.onmousemove;
     window.onmousemove = e => {
-      this.current.x = e.clientX;
-      this.current.y = e.clientY;
-      onmousemove && onmousemove(e);
+      this.current.x = e.clientX - this.el.offsetLeft;
+      this.current.y = e.clientY - this.el.offsetTop;
+      this.onmousemove && this.onmousemove(e);
     };
 
-    const onmouseout = window.onmouseout;
+    this.onmouseout = window.onmouseout;
     window.onmouseout = () => {
       this.current.x = null;
       this.current.y = null;
-      onmouseout && onmouseout();
+      this.onmouseout && this.onmouseout();
     };
   }
 
@@ -80,7 +80,7 @@ export default class CanvasNest {
   }
 
   requestFrame(func) {
-    return requestAnimationFrame(() => func.call(this));
+    this.tid = requestAnimationFrame(() => func.call(this));
   }
 
   drawCanvas() {
@@ -122,5 +122,20 @@ export default class CanvasNest {
       }
     });
     this.requestFrame(this.drawCanvas);
+  }
+
+  destroy() {
+    // 清楚事件
+    clear(this.el);
+
+    // mouse 事件清楚
+    window.onmousemove = this.onmousemove; // 回滚方法
+    window.onmouseout = this.onmouseout;
+
+    // 删除轮询
+    cancelAnimationFrame(this.tid);
+
+    // 删除 dom
+    this.canvas.parentNode.removeChild(this.canvas);
   }
 }

@@ -60,7 +60,10 @@ const config = {
 };
 
 // 在 element 地方使用 config 渲染效果
-new CanvasNest(element, config);
+const cn = new CanvasNest(element, config);
+
+// destroy
+cn.destroy();
 ```
 
 

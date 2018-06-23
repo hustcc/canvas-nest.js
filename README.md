@@ -62,7 +62,10 @@ const config = {
 };
 
 // render nest on element with config.
-new CanvasNest(element, config);
+const cn = new CanvasNest(element, config);
+
+// destroy
+cn.destroy();
 ```
 
 
