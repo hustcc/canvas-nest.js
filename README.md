@@ -68,6 +68,10 @@ const cn = new CanvasNest(element, config);
 cn.destroy();
 ```
 
+Use as Vue component:
+- [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest)
+
+
 
 ## Config
 

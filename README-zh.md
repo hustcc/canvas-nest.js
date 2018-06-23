@@ -49,7 +49,9 @@
 
 > npm i --save canvas-nest.js
 
-然后可以使用 script 方式引入 umd 包，当然也可使用模块化方式 import。并且只有一个 API，使用如下：
+然后可以使用 script 方式引入 umd 包，当然也可使用模块化方式 import。  
+
+并且只有一个 API，使用如下：
 
 ```js
 import CanvasNest from 'canvas-nest.js';
@@ -65,6 +67,9 @@ const cn = new CanvasNest(element, config);
 // destroy
 cn.destroy();
 ```
+
+作为Vue组件使用:
+- [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest)
 
 
 ## 配置和配置项
