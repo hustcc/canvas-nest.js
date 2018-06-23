@@ -2,7 +2,7 @@
 
 > 一个基于 html5 canvas 绘制的网页背景效果，非常赞！如果需要 `wordpress插件`，在插件库搜索 `canvas-nest` 或者看看项目 [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp)。
 
-[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas.nest.js)
+[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
 ![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)
 ![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)
 

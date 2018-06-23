@@ -2,7 +2,7 @@
 
 > A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md). For `wordpress plugin`, search `canvas-nest` or see [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp).
 
-[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas.nest.js)
+[![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
 ![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)
 ![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)
 
