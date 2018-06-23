@@ -1,12 +1,12 @@
 # canvas-nest.js
 
-> A nest backgroud of website draw on canvas. [中文Readme帮助文档](https://github.com/hustcc/canvas-nest.js/blob/master/README-zh.md). For `wordpress plugin`, search `canvas-nest` or see [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp).
+> A nest backgroud of website draw on canvas. [中文 Readme 帮助文档](README-zh.md).
 
 [![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
-![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)
-![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)
+[![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
+[![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
 
-> npm i --save canvas-nest.js
+> **npm i --save canvas-nest.js**
 
 
 ## Feature
@@ -24,7 +24,7 @@
 Insert the code below `between <body> and </body>`.
 
 ```html
-<script src="//cdn.bootcss.com/canvas-nest.js/x.x.x/canvas-nest.js"></script>
+<script src="dist/canvas-nest.js"></script>
 ```
 
 Suggest before the tag `</body>`, like below:
@@ -37,7 +37,7 @@ Suggest before the tag `</body>`, like below:
 <body>
 	...
 	...
-	<script src="//cdn.bootcss.com/canvas-nest.js/x.x.x/canvas-nest.js"></script>
+	<script src="dist/canvas-nest.js"></script>
 </body>
 </html>
 ```
@@ -68,22 +68,18 @@ const cn = new CanvasNest(element, config);
 cn.destroy();
 ```
 
-Use as Vue component:
-- [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest)
-
-
 
 ## Config
 
- - **`color`**: the canvas line color, default: `'0,0,0'` ; the color is (R,G,B)
- - **`opacity`**: the opacity of line (0~1), default: `0.5`
- - **`count`**: the number of lines, default: `150`
- - **`zIndex`**: the index of z space, default: `-1`
+ - **`color`**: the canvas line color, default: `'0,0,0'`; the color is (R,G,B).
+ - **`opacity`**: the opacity of line (0~1), default: `0.5`.
+ - **`count`**: the number of lines, default: `99`.
+ - **`zIndex`**: the index of z space, default: `-1`.
 
 Example:
 
 ```html
-<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/x.x.x/canvas-nest.js"></script>
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="dist/canvas-nest.js"></script>
 ```
 
 Or
@@ -97,23 +93,16 @@ Or
 };
 ```
 
-set the config on the script node `as a attribute`. all the config has the default value, you can choose to set any of them.
+
+## Related projects
+
+ - [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp): a wordpress plugin, search `canvas-nest` in wordpress store.
+ - [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest): vue component wrapper.
 
 
-## Preview
+## Used by
 
-1. [Online Tools: https://atool.vip/](https://atool.vip/)
-
-
-If you has used this project, you can send pr and write it here.
-
-
-![screenshot](https://raw.githubusercontent.com/hustcc/canvas-nest.js/master/screenshot.png)
-
-
-## Other
-
-Library cdn url: [http://www.bootcdn.cn/canvas-nest.js/](http://www.bootcdn.cn/canvas-nest.js/).
+ - [A Tool](https://atools.vip/): Tools for human.
 
 
 
