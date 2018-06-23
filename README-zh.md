@@ -68,36 +68,9 @@ const cn = new CanvasNest(element, config);
 cn.destroy();
 ```
 
-示例(在Vue上使用):
+作为Vue组件使用:
+- [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest)
 
-```html
-<template>
-  <div id="canvas-element">
-    
-  </div>
-</template>
-<script>
-import CanvasNest from 'canvas-nest.js';
-export default {
-  data() {
-    return {
-
-    }
-  },
-  mounted() {
-    const config = {
-    color: '255,0,0',
-    count: 88,
-    };
-
-    // 获取要渲染的元素
-    const element = document.querySelector('#canvas-element')
-    // 在 element 地方使用 config 渲染效果
-    const cn = new CanvasNest(element, config);
-  }
-}
-</script>
-```
 
 ## 配置和配置项
 
