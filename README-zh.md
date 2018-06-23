@@ -91,7 +91,7 @@ export default {
     };
 
     // 获取要渲染的元素
-    const cnEl = document.querySelector('#canvas-element')
+    const element = document.querySelector('#canvas-element')
     // 在 element 地方使用 config 渲染效果
     const cn = new CanvasNest(element, config);
   }

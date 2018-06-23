@@ -91,7 +91,7 @@ export default {
     };
 
     // get the element you want to render
-    const cnEl = document.querySelector('#canvas-element')
+    const element = document.querySelector('#canvas-element')
     // render nest on element with config.
     const cn = new CanvasNest(element, config);
   }
