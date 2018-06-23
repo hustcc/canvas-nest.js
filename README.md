@@ -68,6 +68,36 @@ const cn = new CanvasNest(element, config);
 cn.destroy();
 ```
 
+For example(with Vue):
+
+```html
+<template>
+  <div id="canvas-element">
+    
+  </div>
+</template>
+<script>
+import CanvasNest from 'canvas-nest.js';
+export default {
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+    const config = {
+    color: '255,0,0',
+    count: 88,
+    };
+
+    // get the element you want to render
+    const element = document.querySelector('#canvas-element')
+    // render nest on element with config.
+    const cn = new CanvasNest(element, config);
+  }
+}
+</script>
+```
 
 ## Config
 
