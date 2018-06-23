@@ -6,12 +6,15 @@
 ![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)
 ![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)
 
+> npm i --save canvas-nest.js
+
 
 ## Feature
 
  - No need jQuery.
  - Light, only 2 Kb.
  - Easy to use, even you are not a web developer.
+ - Modular & area render.
 
 
 ## Usage

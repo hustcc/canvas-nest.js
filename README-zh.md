@@ -6,12 +6,15 @@
 ![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)
 ![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)
 
+> npm i --save canvas-nest.js
+
 
 ## 特性
 
  - 不依赖 jQuery，使用原生的 javascript。
  - 非常小，只有 2 Kb。
  - 非常容易实现，配置简单，即使你不是 web 开发者，也能简单搞定。
+ - 模块化 & 区域徐然。
 
 
 ## 使用
