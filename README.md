@@ -53,7 +53,7 @@ Or import the `umd` package use `script` tag.
 
 There is only one API, use it like:
 
-```
+```js
 import CanvasNest from 'canvas-nest.js';
 
 const config = {

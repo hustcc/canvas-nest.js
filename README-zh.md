@@ -51,7 +51,7 @@
 
 然后可以使用 script 方式引入 umd 包，当然也可使用模块化方式 import。并且只有一个 API，使用如下：
 
-```
+```js
 import CanvasNest from 'canvas-nest.js';
 
 const config = {
@@ -77,7 +77,7 @@ cn.destroy();
 
 Example:
 
-```
+```html
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/x.x.x/canvas-nest.js"></script>
 ```
 
