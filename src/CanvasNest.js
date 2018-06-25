@@ -110,8 +110,8 @@ export default class CanvasNest {
           dist = x_dist * x_dist + y_dist * y_dist; // 总距离, m
           if (e === current) {
             if (dist < e.max) { // 加速度大小
-              r.xd = (Math.abs(prex) > Math.abs(x_dist) ? -1 : 1) * dist / e.max * 2 * r.xa;
-              r.yd = (Math.abs(prey) > Math.abs(y_dist) ? -1 : 1) * dist / e.max * 2 * r.ya;
+              r.xd = (Math.abs(prex) > Math.abs(x_dist) && Math.abs(prex) * Math.abs(x_dist) > 0 ? -1 : 1) * dist / e.max * 2 * r.xa;
+              r.yd = (Math.abs(prey) > Math.abs(y_dist) && Math.abs(prey) * Math.abs(y_dist) > 0 ? -1 : 1) * dist / e.max * 2 * r.ya;
             } else {
               r.xd = 0;
               r.yd = 0;
