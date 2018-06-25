@@ -126,12 +126,12 @@ export default class CanvasNest {
             context.lineTo(e.x, e.y),
             context.stroke());
         }
-        r.x += r.xa + r.xd;
-        r.y += r.ya + r.yd; // 移动
-        r.xa *= r.x > width || r.x < 0 ? -1 : 1;
-        r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
-        context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
       }
+      r.x += r.xa + r.xd;
+      r.y += r.ya + r.yd; // 移动
+      r.xa *= r.x > width || r.x < 0 ? -1 : 1;
+      r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
+      context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
     });
     this.requestFrame(this.drawCanvas);
   }
