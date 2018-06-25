@@ -112,7 +112,6 @@ export default class CanvasNest {
             if (dist < e.max) { // 加速度大小
               r.xd = (Math.abs(prex) > Math.abs(x_dist) ? -1 : 1) * dist / e.max * 2 * r.xa;
               r.yd = (Math.abs(prey) > Math.abs(y_dist) ? -1 : 1) * dist / e.max * 2 * r.ya;
-              console.log(r.xd, r.yd);
             } else {
               r.xd = 0;
               r.yd = 0;
