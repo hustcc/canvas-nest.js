@@ -14,7 +14,7 @@
     "build": "npm run build:umd && npm run build:iife && npm run build:lib && npm run test"
   },
   "dependencies": {
-    "size-sensor": "^0.0.4"
+    "size-sensor": "^0.1.0"
   },
   "size-limit": [
     {
