@@ -1,6 +1,6 @@
 # canvas-nest.js
 
-> A nest backgroud of website draw on canvas. [中文 Readme 帮助文档](README-zh.md).
+> This background effect for web pages is drawn using tools based on html5 canvas. The final result is pretty awesome! [中文 Readme 帮助文档](README-zh.md).
 
 [![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
 [![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
@@ -12,10 +12,11 @@
 
 ## Feature
 
- - No need jQuery.
- - Light, only 2 Kb.
- - Easy to use, even you are not a web developer.
- - Modular & area render.
+ - It does not depend on jQuery and original javascrpit is used.
+ - Small size, only 2 Kb.
+ - Easy to implement, simple configuration.
+ - You do not have to be a web developer to use it.
+ - Modularized with area rendering.
 
 
 ## Usage
@@ -28,7 +29,7 @@ Insert the code below `between <body> and </body>`.
 <script src="dist/canvas-nest.js"></script>
 ```
 
-Suggest before the tag `</body>`, like below:
+Strongly suggest to insert before the tag `</body>`, as the following:
 
 ```html
 <html>
@@ -46,13 +47,13 @@ Suggest before the tag `</body>`, like below:
 Then ok! `Please do not add the code in the <head> </head>`.
 
 
- - Module usage (Area render)
+ - Modular usage (Area render)
 
 > npm i --save canvas-nest.js
 
-Or import the `umd` package use `script` tag.
+You could import `umd` packages with `script` tag or with modules.
 
-There is only one API, use it like:
+There is only one API, use it as below:
 
 ```js
 import CanvasNest from 'canvas-nest.js';
@@ -62,7 +63,7 @@ const config = {
   count: 88,
 };
 
-// render nest on element with config.
+// Using config rendering effect at 'element'.
 const cn = new CanvasNest(element, config);
 
 // destroy
@@ -70,12 +71,12 @@ cn.destroy();
 ```
 
 
-## Config
+## Configurations and settings
 
- - **`color`**: the canvas line color, default: `'0,0,0'`; the color is (R,G,B).
+ - **`color`**: color of lines, default: `'0,0,0'`; RGB values: (R,G,B).(note: use ',' to separate.)
  - **`opacity`**: the opacity of line (0~1), default: `0.5`.
  - **`count`**: the number of lines, default: `99`.
- - **`zIndex`**: the index of z space, default: `-1`.
+ - **`zIndex`**: z-index property of the background, default: `-1`.
 
 Example:
 
@@ -83,7 +84,9 @@ Example:
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="dist/canvas-nest.js"></script>
 ```
 
-Or
+These property configuration settings are in the js script tag as its property values. If these settings are not customized, default values are available as well.
+
+With modules，use config values as below：
 
 ```js
 {
@@ -103,7 +106,7 @@ Or
 
 ## Used by
 
- - [A Tool](https://atools.vip/): Tools for human.
+ - [A Tool](https://atools.vip/): a convenient tool box.
 
 
 
