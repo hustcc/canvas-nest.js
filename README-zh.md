@@ -1,14 +1,22 @@
 # canvas-nest.js
 
-> 一个基于 html5 canvas 绘制的网页背景效果，非常赞！
+> 一个基于 html5 canvas 绘制的网页背景效果。
 
 [![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
 [![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
 [![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
 [![gzip](http://img.badgesize.io/https://unpkg.com/canvas-nest.js/dist/canvas-nest.js?compression=gzip)](https://unpkg.com/canvas-nest.js/dist/canvas-nest.js)
 
-> **npm i --save canvas-nest.js**
+![screenshot](/screenshot.png)
 
+## 安装
+```sh
+# 使用 npm
+npm install --save canvas-nest.js
+
+# 或者使用 yarn
+yarn add canvas-nest.js
+```
 
 ## 特性
 
@@ -48,9 +56,7 @@
 
  - 模块化区域绘制（定制开发）
 
-> npm i --save canvas-nest.js
-
-然后可以使用 script 方式引入 umd 包，当然也可使用模块化方式 import。
+完成安装好，可以使用模块化方式 import。
 
 并且只有一个 API，使用如下：
 
@@ -70,7 +76,7 @@ cn.destroy();
 ```
 
 
-## 配置和配置项
+## 配置
 
  - **`color`**: 线条颜色, 默认: `'0,0,0'` ；三个数字分别为(R,G,B)，注意用,分割
  - **`opacity`**: 线条透明度（0~1）, 默认: `0.5`
@@ -80,13 +86,13 @@ cn.destroy();
 
 Example:
 
+ - 快捷使用
+
 ```html
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="dist/canvas-nest.js"></script>
 ```
 
-这些属性配置在引用 js 的 script 标签中，作为它的一个属性值。所有的配置项都有默认值，如果你不知道怎么设置，可以先不设置这些配置项，就使用默认值看看效果也可以的。
-
-或者模块化调用的时候，config 参数写成：
+ - 模块化区域绘制（定制开发）
 
 ```js
 {
@@ -97,6 +103,8 @@ Example:
 };
 ```
 
+**注意: 所有的配置项都有默认值，如果你不知道怎么设置，可以先不设置这些配置项，就使用默认值看看效果也可以的。**
+
 
 ## 相关项目
 
@@ -106,7 +114,7 @@ Example:
 
 ## 使用项目
 
- - [A Tool](https://atools.vip/): 一个好用的工具集合.
+ - [A Tool](https://atool.vip): 一个好用的工具集合.
 
 
 ## License
