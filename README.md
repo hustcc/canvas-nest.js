@@ -115,7 +115,7 @@ Example:
 
 ## Used by
 
- - [A Tool](https://atools.vip/): a convenient tool box.
+ - [A Tool](https://atool.vip): a convenient tool box.
 
 
 

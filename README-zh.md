@@ -114,7 +114,7 @@ Example:
 
 ## 使用项目
 
- - [A Tool](https://atools.vip/): 一个好用的工具集合.
+ - [A Tool](https://atool.vip): 一个好用的工具集合.
 
 
 ## License
