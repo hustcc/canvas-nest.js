@@ -1,14 +1,13 @@
 # canvas-nest.js
 
-> This background effect for web pages is drawn using tools based on html5 canvas. The final result is pretty awesome! [中文 Readme 帮助文档](README-zh.md).
+> A nest backgroud of website draw on canvas. [中文 Readme 帮助文档](README-zh.md).
 
 [![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
 [![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
 [![npm](https://img.shields.io/npm/dm/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
 [![gzip](http://img.badgesize.io/https://unpkg.com/canvas-nest.js/dist/canvas-nest.js?compression=gzip)](https://unpkg.com/canvas-nest.js/dist/canvas-nest.js)
 
-> **npm i --save canvas-nest.js**
-
+![screenshot](/screenshot.png)
 
 ## Feature
 
@@ -17,6 +16,16 @@
  - Easy to implement, simple configuration.
  - You do not have to be a web developer to use it.
  - Modularized with area rendering.
+
+
+## Install
+```sh
+# use npm
+npm install --save canvas-nest.js
+
+# or use yarn
+yarn add canvas-nest.js
+```
 
 
 ## Usage
@@ -49,9 +58,7 @@ Then ok! `Please do not add the code in the <head> </head>`.
 
  - Modular usage (Area render)
 
-> npm i --save canvas-nest.js
-
-You could import `umd` packages with `script` tag or with modules.
+After installation, you can import this as module.
 
 There is only one API, use it as below:
 
@@ -71,7 +78,7 @@ cn.destroy();
 ```
 
 
-## Configurations and settings
+## Configuration
 
  - **`color`**: color of lines, default: `'0,0,0'`; RGB values: (R,G,B).(note: use ',' to separate.)
  - **`opacity`**: the opacity of line (0~1), default: `0.5`.
@@ -80,13 +87,13 @@ cn.destroy();
 
 Example:
 
+ - Script tag
+
 ```html
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="dist/canvas-nest.js"></script>
 ```
 
-These property configuration settings are in the js script tag as its property values. If these settings are not customized, default values are available as well.
-
-With modules，use config values as below：
+ - Modular usage (Area render)
 
 ```js
 {
@@ -96,6 +103,8 @@ With modules，use config values as below：
   count: 99,
 };
 ```
+
+**Note: If the Configuration isn't customized, default values are available as well.**
 
 
 ## Related projects
