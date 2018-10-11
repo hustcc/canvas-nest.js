@@ -110,7 +110,7 @@ Example:
 
  - [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp): WP 插件，在插件市场搜索 `canvas-nest` 即可安装。
  - [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest): VUE 组件包装。
-
+ - [react-canvas-nest](https://github.com/flyerH/react-canvas-nest): React 组件包装。
 
 ## 使用项目
 
