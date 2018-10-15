@@ -112,6 +112,7 @@ Example:
  - [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp): a wordpress plugin, search `canvas-nest` in wordpress store.
  - [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest): vue component wrapper.
  - [react-canvas-nest](https://github.com/flyerH/react-canvas-nest): react component wrapper.
+ - [canvas-nest-for-vscode](https://github.com/AShujiao/vscode-nest): a vscode extensions, search `nest` in vscode extensions.
 
 ## Used by
 
