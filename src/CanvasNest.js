@@ -7,6 +7,9 @@ import { bind, clear } from 'size-sensor';
 import { requestAnimationFrame, cancelAnimationFrame, range, canvasStyle } from './utils';
 
 export default class CanvasNest {
+
+  static version = __VERSION__;
+
   constructor(el, config) {
     this.el = el;
 

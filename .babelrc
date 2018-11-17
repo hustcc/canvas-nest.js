@@ -11,7 +11,8 @@
       ],
       "plugins": [
         "transform-class-properties",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "version"
       ]
     },
     "babel": {
@@ -19,7 +20,8 @@
       "plugins": [
         "transform-class-properties",
         "add-module-exports",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "version"
       ]
     }
   }
