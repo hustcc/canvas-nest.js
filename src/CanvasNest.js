@@ -64,6 +64,8 @@ export default class CanvasNest {
       y: Math.random() * this.canvas.height,
       xa: 2 * Math.random() - 1, // 随机运动返现
       ya: 2 * Math.random() - 1,
+      xd: 0,
+      yd: 0,
       max: 6000 //沾附距离
     }));
   };
@@ -96,14 +98,9 @@ export default class CanvasNest {
 
     context.clearRect(0, 0, width, height);
     // 随机的线条和当前位置联合数组
-    let e, i, d, x_dist, y_dist, dist; // 临时节点
+    let e, i, d, x_dist, y_dist, dist, prex, prey; // 临时节点
     // 遍历处理每一个点
     points.forEach((r, idx) => {
-      r.x += r.xa;
-      r.y += r.ya; // 移动
-      r.xa *= r.x > width || r.x < 0 ? -1 : 1;
-      r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
-        context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
       // 从下一个点开始
       for (i = idx + 1; i < all.length; i ++) {
         e = all[i];
@@ -111,9 +108,19 @@ export default class CanvasNest {
         if (null !== e.x && null !== e.y) {
           x_dist = r.x - e.x; // x轴距离 l
           y_dist = r.y - e.y; // y轴距离 n
+          prex = r.x + r.xa - e.x,  // 预算下一个x,y的位置，以判断是加速还是减速
+          prey = r.y + r.ya - e.y;
           dist = x_dist * x_dist + y_dist * y_dist; // 总距离, m
-
-          dist < e.max && (e === current && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), // 靠近的时候加速
+          if (e === current) {
+            if (dist < e.max) { // 加速度大小
+              r.xd = (Math.abs(prex) > Math.abs(x_dist) && Math.abs(prex) * Math.abs(x_dist) > 0 ? -1 : 1) * dist / e.max * 2 * r.xa;
+              r.yd = (Math.abs(prey) > Math.abs(y_dist) && Math.abs(prey) * Math.abs(y_dist) > 0 ? -1 : 1) * dist / e.max * 2 * r.ya;
+            } else {
+              r.xd = 0;
+              r.yd = 0;
+            }
+          }
+          dist < e.max && (
             d = (e.max - dist) / e.max,
             context.beginPath(),
             context.lineWidth = d / 2,
@@ -123,6 +130,11 @@ export default class CanvasNest {
             context.stroke());
         }
       }
+      r.x += r.xa + r.xd;
+      r.y += r.ya + r.yd; // 移动
+      r.xa *= r.x > width || r.x < 0 ? -1 : 1;
+      r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
+      context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
     });
     this.requestFrame(this.drawCanvas);
   }
