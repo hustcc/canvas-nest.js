@@ -16,7 +16,8 @@ export default class CanvasNest {
     this.c = {
       zIndex: -1,           // z-index
       opacity: 0.5,         // opacity
-      color: '0,0,0',       // color
+      color: '0,0,0',       // color of lines
+      pointColor: '0,0,0',  // color of points
       count: 99,            // count
       ...config,
     };
@@ -64,7 +65,7 @@ export default class CanvasNest {
       y: Math.random() * this.canvas.height,
       xa: 2 * Math.random() - 1, // 随机运动返现
       ya: 2 * Math.random() - 1,
-      max: 6000 //沾附距离
+      max: 6000 // 沾附距离
     }));
   };
 
@@ -103,7 +104,8 @@ export default class CanvasNest {
       r.y += r.ya; // 移动
       r.xa *= r.x > width || r.x < 0 ? -1 : 1;
       r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
-        context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
+      context.fillStyle = `rgba(${this.c.pointColor})`;
+      context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
       // 从下一个点开始
       for (i = idx + 1; i < all.length; i ++) {
         e = all[i];
@@ -128,10 +130,10 @@ export default class CanvasNest {
   }
 
   destroy() {
-    // 清楚事件
+    // 清除事件
     clear(this.el);
 
-    // mouse 事件清楚
+    // mouse 事件清除
     window.onmousemove = this.onmousemove; // 回滚方法
     window.onmouseout = this.onmouseout;
 

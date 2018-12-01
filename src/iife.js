@@ -13,6 +13,7 @@ const getScriptConfig = () => {
     zIndex: script.getAttribute('zIndex'),
     opacity: script.getAttribute('opacity'),
     color: script.getAttribute('color'),
+    pointColor: script.getAttribute('pointColor'),
     count: Number(script.getAttribute('count')) || 99,
   };
 };
