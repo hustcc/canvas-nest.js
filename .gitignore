@@ -2,4 +2,5 @@
 .settings
 .idea
 node_modules/*
-
+*.lock
+*.log
