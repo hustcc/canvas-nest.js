@@ -81,6 +81,7 @@ cn.destroy();
 ## Configuration
 
  - **`color`**: color of lines, default: `'0,0,0'`; RGB values: (R,G,B).(note: use ',' to separate.)
+ - **`pointColor`**: color of points, default: `'0,0,0'`; RGB values: (R,G,B).(note: use ',' to separate.)
  - **`opacity`**: the opacity of line (0~1), default: `0.5`.
  - **`count`**: the number of lines, default: `99`.
  - **`zIndex`**: z-index property of the background, default: `-1`.
