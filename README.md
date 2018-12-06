@@ -1,6 +1,6 @@
 # canvas-nest.js
 
-> A nest backgroud of website draw on canvas. [中文 Readme 帮助文档](README-zh.md).
+> A nest background of website draw on canvas. [中文 Readme 帮助文档](README-zh.md).
 
 [![npm](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://git.hust.cc/canvas-nest.js)
 [![npm](https://img.shields.io/npm/v/canvas-nest.js.svg)](https://www.npmjs.com/package/canvas-nest.js)
