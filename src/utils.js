@@ -8,7 +8,7 @@ export const requestAnimationFrame = window.requestAnimationFrame ||
   window.mozRequestAnimationFrame ||
   window.msRequestAnimationFrame ||
   window.oRequestAnimationFrame ||
-  function(func) {
+  function (func) {
     return window.setTimeout(func, 1000 / 60);
   };
 
@@ -19,8 +19,16 @@ export const cancelAnimationFrame = window.cancelAnimationFrame ||
   window.oCancelAnimationFrame ||
   window.clearTimeout;
 
-export const range = n =>
-  new Array(n).fill(0).map((e, idx) => idx);
-
+export const range = Array.fill ? n => {
+  return new Array(n).fill(0).map(function (e, idx) {
+    return idx;
+  });
+} : n => {
+  let result = []
+  for (var i = 0; i < n; i++) {
+    result.push(i)
+  }
+  return result
+}
 export const canvasStyle = config =>
   `display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:${config.zIndex};opacity:${config.opacity}`;

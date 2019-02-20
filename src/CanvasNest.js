@@ -46,8 +46,8 @@ export default class CanvasNest {
 
     this.onmousemove = window.onmousemove;
     window.onmousemove = e => {
-      this.current.x = e.clientX - this.el.offsetLeft + document.scrollingElement.scrollLeft; // 当存在横向滚动条时，x坐标再往右移动滚动条拉动的距离
-      this.current.y = e.clientY - this.el.offsetTop + document.scrollingElement.scrollTop; // 当存在纵向滚动条时，y坐标再往下移动滚动条拉动的距离
+      this.current.x = e.clientX - this.el.offsetLeft + (document.scrollingElement || document.documentElement).scrollLeft; // 当存在横向滚动条时，x坐标再往右移动滚动条拉动的距离
+      this.current.y = e.clientY - this.el.offsetTop + (document.scrollingElement || document.documentElement).scrollTop; // 当存在纵向滚动条时，y坐标再往下移动滚动条拉动的距离
       this.onmousemove && this.onmousemove(e);
     };
 
@@ -107,7 +107,7 @@ export default class CanvasNest {
       context.fillStyle = `rgba(${this.c.pointColor})`;
       context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
       // 从下一个点开始
-      for (i = idx + 1; i < all.length; i ++) {
+      for (i = idx + 1; i < all.length; i++) {
         e = all[i];
         // 当前点存在
         if (null !== e.x && null !== e.y) {
