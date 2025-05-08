@@ -112,7 +112,7 @@ Example:
  - [canvas-nest-for-wp](https://github.com/aTool-org/canvas-nest-for-wp): WP 插件，在插件市场搜索 `canvas-nest` 即可安装。
  - [vue-canvas-nest](https://github.com/ZYSzys/vue-canvas-nest): VUE 组件包装。
  - [react-canvas-nest](https://github.com/flyerH/react-canvas-nest): React 组件包装。
- - [canvas-nest-for-vscode](https://github.com/AShujiao/vscode-nest): vscode 扩展, 在vscode扩展市场中搜索`nest` 即可安装。
+ - [canvas-nest-for-vscode](https://github.com/AShujiao/vscode-background-cover): vscode 扩展, 在vscode扩展市场中搜索`background-cover` 即可安装。
 
 ## 使用项目
 
